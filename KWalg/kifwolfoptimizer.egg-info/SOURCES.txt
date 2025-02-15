@@ -1,0 +1,10 @@
+setup.py
+kifwolfoptimizer/__init__.py
+kifwolfoptimizer/optimizer.py
+kifwolfoptimizer.egg-info/PKG-INFO
+kifwolfoptimizer.egg-info/SOURCES.txt
+kifwolfoptimizer.egg-info/dependency_links.txt
+kifwolfoptimizer.egg-info/requires.txt
+kifwolfoptimizer.egg-info/top_level.txt
+tests/__init__.py
+tests/test_mnist_optimizers.py
