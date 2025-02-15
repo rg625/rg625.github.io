@@ -1,32 +1,23 @@
 ---
 layout: post
-title: "MNIST Optimizer Comparison"
+title: "Keifer - Wolfowitz algorithm for gradients approximation"
 date: 2025-02-15 16:15:49
 author: rg625
 ---
 
 ## Introduction
 
-In this blog post, we will compare different optimization algorithms for training a Convolutional Neural Network (CNN) on the MNIST dataset. The MNIST dataset consists of handwritten digits and is a common benchmark for evaluating machine learning models.
+In this blog post, we will compare the Keifer - Wolfowitz (KW) method for gradients approximation when used for both optimization and sampling purposes. The first branch of tasks includes using the KW method to optimize a shallow neural network for linear regression and a convolutional neural network (CNN) for classification, while the second brach uses it to approximate the score of a distribution.
 
-## Methodology
+## Optimization
+The optimizer is compared against other state-of-the-art optimizers widely used througout literature, such as Adagrad, Adam and SGD, but also against a similar method wich uses a random perturbation - SPSA. Two optimizers were built: a simple one wich follows the theory, and another one which borrows the idea of an adaptive step from Adam.
 
-We trained a simple CNN model using various optimizers on the MNIST dataset. The optimizers used in this study are:
+### Linear Regression
+The shallow neural network consists of one layer only, with 20 weights. The dataset was synthetically generated using a random set of weights. The performance of each optimizer was evaluated based on training loss, test loss, training accuracy, test accuracy, compute cost, complexity, and training time. The results are shown in the figures below. 
 
-- SPSAOptimizerSimple
-- SPSAOptimizerAdaptive
-- KieferWolfowitzSimple
-- KieferWolfowitzAdaptive
-- Adam
-- Adagrad
-- SGD
+### Classification
 
-The model architecture is as follows:
-
-- Two convolutional layers with ReLU activation and max pooling.
-- Two fully connected layers with ReLU activation.
-
-We trained the model for 10 epochs with a batch size of 1024 and a learning rate of 0.01. The performance of each optimizer was evaluated based on training loss, test loss, training accuracy, test accuracy, compute cost, complexity, and training time.
+We trained a simple CNN model using various optimizers on the MNIST dataset. The model architecture involved two convolutional layers with ReLU activation and max pooling, and two fully connected layers, again with ReLU activation - a total of ???? parameters. We trained the model for 10 epochs with a batch size of 1024 and a learning rate of 0.01. The performance of each optimizer was evaluated based on training loss, test loss, training accuracy, test accuracy, compute cost, complexity, and training time.
 
 ## Results
 
