@@ -30,7 +30,7 @@ We trained the model for 10 epochs with a batch size of 1024 and a learning rate
 
 ## Results
 
-### Training and Test Loss
+<!-- ### Training and Test Loss
 
 ![Train Loss](../assets/images/mnist_optimizer_comparison/comparative_train_loss.png)
 ![Test Loss](../assets/images/mnist_optimizer_comparison/comparative_test_loss.png)
@@ -47,7 +47,7 @@ We trained the model for 10 epochs with a batch size of 1024 and a learning rate
 
 ### Training Time
 
-![Time](../assets/images/mnist_optimizer_comparison/comparative_time.png)
+![Time](../assets/images/mnist_optimizer_comparison/comparative_time.png) -->
 
 ### Predictions and Confusion Matrices
 
