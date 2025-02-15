@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MNIST Optimizer Comparison"
-date: 2025-02-15 16:15:49
+date: 2025-02-15 16:31:35
 author: rg625
 ---
 
@@ -30,24 +30,24 @@ We trained the model for 10 epochs with a batch size of 1024 and a learning rate
 
 ## Results
 
-<!-- ### Training and Test Loss
+### Training and Test Loss
 
-![Train Loss](../assets/images/mnist_optimizer_comparison/comparative_train_loss.png)
-![Test Loss](../assets/images/mnist_optimizer_comparison/comparative_test_loss.png)
+![Train Loss](/assets/images/mnist_optimizer_comparison/comparative_train_loss.png)
+![Test Loss](/assets/images/mnist_optimizer_comparison/comparative_test_loss.png)
 
 ### Training and Test Accuracy
 
-![Train Accuracy](../assets/images/mnist_optimizer_comparison/comparative_train_accuracy.png)
-![Test Accuracy](../assets/images/mnist_optimizer_comparison/comparative_test_accuracy.png)
+![Train Accuracy](/assets/images/mnist_optimizer_comparison/comparative_train_accuracy.png)
+![Test Accuracy](/assets/images/mnist_optimizer_comparison/comparative_test_accuracy.png)
 
 ### Compute Cost and Complexity
 
-![Compute Cost](../assets/images/mnist_optimizer_comparison/comparative_compute_cost.png)
-![Complexity](../assets/images/mnist_optimizer_comparison/comparative_complexity.png)
+![Compute Cost](/assets/images/mnist_optimizer_comparison/comparative_compute_cost.png)
+![Complexity](/assets/images/mnist_optimizer_comparison/comparative_complexity.png)
 
 ### Training Time
 
-![Time](../assets/images/mnist_optimizer_comparison/comparative_time.png) -->
+![Time](/assets/images/mnist_optimizer_comparison/comparative_time.png)
 
 ### Predictions and Confusion Matrices
 
@@ -55,38 +55,38 @@ Below are the predictions and confusion matrices for each optimizer. Each figure
 
 #### SPSAOptimizerSimple
 
-![Predictions](../assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerSimple.png)
-![Confusion Matrix](../assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerSimple.png)
+![Predictions](/assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerSimple.png)
+![Confusion Matrix](/assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerSimple.png)
 
 #### SPSAOptimizerAdaptive
 
-![Predictions](../assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerAdaptive.png)
-![Confusion Matrix](../assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerAdaptive.png)
+![Predictions](/assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerAdaptive.png)
+![Confusion Matrix](/assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerAdaptive.png)
 
 #### KieferWolfowitzSimple
 
-![Predictions](../assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzSimple.png)
-![Confusion Matrix](../assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzSimple.png)
+![Predictions](/assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzSimple.png)
+![Confusion Matrix](/assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzSimple.png)
 
 #### KieferWolfowitzAdaptive
 
-![Predictions](../assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzAdaptive.png)
-![Confusion Matrix](../assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzAdaptive.png)
+![Predictions](/assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzAdaptive.png)
+![Confusion Matrix](/assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzAdaptive.png)
 
 #### Adam
 
-![Predictions](../assets/images/mnist_optimizer_comparison/predictions_Adam.png)
-![Confusion Matrix](../assets/images/mnist_optimizer_comparison/confusion_matrix_Adam.png)
+![Predictions](/assets/images/mnist_optimizer_comparison/predictions_Adam.png)
+![Confusion Matrix](/assets/images/mnist_optimizer_comparison/confusion_matrix_Adam.png)
 
 #### Adagrad
 
-![Predictions](../assets/images/mnist_optimizer_comparison/predictions_Adagrad.png)
-![Confusion Matrix](../assets/images/mnist_optimizer_comparison/confusion_matrix_Adagrad.png)
+![Predictions](/assets/images/mnist_optimizer_comparison/predictions_Adagrad.png)
+![Confusion Matrix](/assets/images/mnist_optimizer_comparison/confusion_matrix_Adagrad.png)
 
 #### SGD
 
-![Predictions](../assets/images/mnist_optimizer_comparison/predictions_SGD.png)
-![Confusion Matrix](../assets/images/mnist_optimizer_comparison/confusion_matrix_SGD.png)
+![Predictions](/assets/images/mnist_optimizer_comparison/predictions_SGD.png)
+![Confusion Matrix](/assets/images/mnist_optimizer_comparison/confusion_matrix_SGD.png)
 
 ## Conclusion
 
