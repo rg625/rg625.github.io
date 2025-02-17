@@ -59,100 +59,46 @@ A CNN model was trained using various optimizers on the MNIST dataset. The model
 The figures below illustrate the predictions and confusion matrices for each optimizer. Each figure presents a 4x4 grid of randomly selected test samples, along with their true and predicted labels.
 
 #### SPSA - Simple
-<style>
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    align-items: center; /* Ensures alignment */
-  }
-  .grid-item img {
-    width: 100%;
-    height: 100%; /* Forces images to take the full height */
-    object-fit: contain; /* Ensures consistent scaling without distortion */
-  }
-  .grid-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 500px; /* Set a fixed height for equal sizing */
-  }
-</style>
-
-<div class="grid-container">
-  <div class="grid-item">
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerSimple.png" alt="Predictions - SPSAOptimizerSimple">
-  </div>
-  <div class="grid-item">
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerSimple.png" alt="Confusion Matrix - SPSAOptimizerSimple">
-  </div>
+<div style="display: flex; flex-direction: column; gap: 20px;">
+  <iframe src="https://rg625.github.io/assets/images/mnist_classifier/predictions_SPSASimple.html" width="100%" height="500px"></iframe>
+  <iframe src="https://rg625.github.io/assets/images/mnist_classifier/confusion_matrix_SPSASimple.html" width="100%" height="500px"></iframe>
 </div>
 
-
 #### SPSA - Adaptive
-
-<div class="grid-container">
-  <div class="grid-item">
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerAdaptive.png" alt="Predictions - SPSAOptimizerAdaptive">
-  </div>
-  <div class="grid-item">
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerAdaptive.png" alt="Confusion Matrix - SPSAOptimizerAdaptive">
-  </div>
+<div style="display: flex; flex-direction: column; gap: 20px;">
+  <iframe src="https://rg625.github.io/assets/images/mnist_classifier/predictions_SPSAAdaptive.html" width="100%" height="500px"></iframe>
+  <iframe src="https://rg625.github.io/assets/images/mnist_classifier/confusion_matrix_SPSAAdaptive.html" width="100%" height="500px"></iframe>
 </div>
 
 #### KW - Simple
-
-<div class="grid-container">
-  <div class="grid-item">
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzSimple.png" alt="Predictions - KieferWolfowitzSimple">
-  </div>
-  <div class="grid-item">
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzSimple.png" alt="Confusion Matrix - KieferWolfowitzSimple">
-  </div>
+<div style="display: flex; flex-direction: column; gap: 20px;">
+  <iframe src="https://rg625.github.io/assets/images/mnist_classifier/predictions_KieferWolfowitzSimple.html" width="100%" height="500px"></iframe>
+  <iframe src="https://rg625.github.io/assets/images/mnist_classifier/confusion_matrix_KieferWolfowitzSimple.html" width="100%" height="500px"></iframe>
 </div>
 
 #### KW - Adaptive
-
-<div class="grid-container">
-  <div class="grid-item">
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzAdaptive.png" alt="Predictions - KieferWolfowitzAdaptive">
-  </div>
-  <div class="grid-item">
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzAdaptive.png" alt="Confusion Matrix - KieferWolfowitzAdaptive">
-  </div>
+<div style="display: flex; flex-direction: column; gap: 20px;">
+  <iframe src="https://rg625.github.io/assets/images/mnist_classifier/predictions_KieferWolfowitzAdaptive.html" width="100%" height="500px"></iframe>
+  <iframe src="https://rg625.github.io/assets/images/mnist_classifier/confusion_matrix_KieferWolfowitzAdaptive.html" width="100%" height="500px"></iframe>
 </div>
 
 #### Adam
-
-<div class="grid-container">
-  <div class="grid-item">
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_Adam.png" alt="Predictions - Adam">
-  </div>
-  <div class="grid-item">
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_Adam.png" alt="Confusion Matrix - Adam">
-  </div>
+<div style="display: flex; flex-direction: column; gap: 20px;">
+  <iframe src="https://rg625.github.io/assets/images/mnist_classifier/predictions_Adam.html" width="100%" height="500px"></iframe>
+  <iframe src="https://rg625.github.io/assets/images/mnist_classifier/confusion_matrix_Adam.html" width="100%" height="500px"></iframe>
 </div>
 
 #### Adagrad
-
-<div class="grid-container">
-  <div class="grid-item">
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_Adagrad.png" alt="Predictions - Adagrad">
-  </div>
-  <div class="grid-item">
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_Adagrad.png" alt="Confusion Matrix - Adagrad">
-  </div>
+<div style="display: flex; flex-direction: column; gap: 20px;">
+  <iframe src="https://rg625.github.io/assets/images/mnist_classifier/predictions_Adagrad.html" width="100%" height="500px"></iframe>
+  <iframe src="https://rg625.github.io/assets/images/mnist_classifier/confusion_matrix_Adagrad.html" width="100%" height="500px"></iframe>
 </div>
 
 #### Stochastig Gradient Descent
 
-<div class="grid-container">
-  <div class="grid-item">
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_SGD.png" alt="Predictions - SGD">
-  </div>
-  <div class="grid-item">
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_SGD.png" alt="Confusion Matrix - SGD">
-  </div>
+<div style="display: flex; flex-direction: column; gap: 20px;">
+  <iframe src="https://rg625.github.io/assets/images/mnist_classifier/predictions_SGD.html" width="100%" height="500px"></iframe>
+  <iframe src="https://rg625.github.io/assets/images/mnist_classifier/confusion_matrix_SGD.html" width="100%" height="500px"></iframe>
 </div>
 
 ## Sampling
