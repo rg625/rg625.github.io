@@ -58,63 +58,93 @@ A CNN model was trained using various optimizers on the MNIST dataset. The model
 
 The figures below illustrate the predictions and confusion matrices for each optimizer. Each figure presents a 4x4 grid of randomly selected test samples, along with their true and predicted labels.
 
-#### SPSAOptimizerSimple
+#### SPSA - Simple
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .grid-item img {
+    width: 100%;
+    height: auto; /* Ensures consistent height */
+    object-fit: contain;
+  }
+</style>
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-  <!-- SPSAOptimizerSimple -->
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerSimple.png" alt="Predictions - SPSAOptimizerSimple" width="100%">
+<div class="grid-container">
+  <div class="grid-item">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerSimple.png" alt="Predictions - SPSAOptimizerSimple">
   </div>
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerSimple.png" alt="Confusion Matrix - SPSAOptimizerSimple" width="100%">
+  <div class="grid-item">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerSimple.png" alt="Confusion Matrix - SPSAOptimizerSimple">
   </div>
+</div>
 
-  <!-- SPSAOptimizerAdaptive -->
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerAdaptive.png" alt="Predictions - SPSAOptimizerAdaptive" width="100%">
-  </div>
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerAdaptive.png" alt="Confusion Matrix - SPSAOptimizerAdaptive" width="100%">
-  </div>
 
-  <!-- KieferWolfowitzSimple -->
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzSimple.png" alt="Predictions - KieferWolfowitzSimple" width="100%">
-  </div>
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzSimple.png" alt="Confusion Matrix - KieferWolfowitzSimple" width="100%">
-  </div>
+#### SPSA - Adaptive
 
-  <!-- KieferWolfowitzAdaptive -->
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzAdaptive.png" alt="Predictions - KieferWolfowitzAdaptive" width="100%">
+<div class="grid-container">
+  <div class="grid-item">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerAdaptive.png" alt="Predictions - SPSAOptimizerAdaptive">
   </div>
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzAdaptive.png" alt="Confusion Matrix - KieferWolfowitzAdaptive" width="100%">
+  <div class="grid-item">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerAdaptive.png" alt="Confusion Matrix - SPSAOptimizerAdaptive">
   </div>
+</div>
 
-  <!-- Adam -->
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_Adam.png" alt="Predictions - Adam" width="100%">
-  </div>
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_Adam.png" alt="Confusion Matrix - Adam" width="100%">
-  </div>
+#### KW - Simple
 
-  <!-- Adagrad -->
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_Adagrad.png" alt="Predictions - Adagrad" width="100%">
+<div class="grid-container">
+  <div class="grid-item">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzSimple.png" alt="Predictions - KieferWolfowitzSimple">
   </div>
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_Adagrad.png" alt="Confusion Matrix - Adagrad" width="100%">
+  <div class="grid-item">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzSimple.png" alt="Confusion Matrix - KieferWolfowitzSimple">
   </div>
+</div>
 
-  <!-- SGD -->
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_SGD.png" alt="Predictions - SGD" width="100%">
+#### KW - Adaptive
+
+<div class="grid-container">
+  <div class="grid-item">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzAdaptive.png" alt="Predictions - KieferWolfowitzAdaptive">
   </div>
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_SGD.png" alt="Confusion Matrix - SGD" width="100%">
+  <div class="grid-item">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzAdaptive.png" alt="Confusion Matrix - KieferWolfowitzAdaptive">
+  </div>
+</div>
+
+#### Adam
+
+<div class="grid-container">
+  <div class="grid-item">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_Adam.png" alt="Predictions - Adam">
+  </div>
+  <div class="grid-item">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_Adam.png" alt="Confusion Matrix - Adam">
+  </div>
+</div>
+
+#### Adagrad
+
+<div class="grid-container">
+  <div class="grid-item">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_Adagrad.png" alt="Predictions - Adagrad">
+  </div>
+  <div class="grid-item">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_Adagrad.png" alt="Confusion Matrix - Adagrad">
+  </div>
+</div>
+
+#### Stochastig Gradient Descent
+
+<div class="grid-container">
+  <div class="grid-item">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_SGD.png" alt="Predictions - SGD">
+  </div>
+  <div class="grid-item">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_SGD.png" alt="Confusion Matrix - SGD">
   </div>
 </div>
 
@@ -122,12 +152,9 @@ The figures below illustrate the predictions and confusion matrices for each opt
 
 The second application of the KW method involves estimating the score function of a probability distribution for use in two Markov Chain Monte Carlo (MCMC) sampling algorithms: Langevin Dynamics (LD) and Hamiltonian/Hybrid Monte Carlo (HMC). The performance of KW in this context was compared against PyTorch’s autodifferentiation-based approach and Spall’s SPSA method. For a comprehensive analysis, all these models were tested for different number of steps in the MCMC chains and samples. The main results displaying the evolution of a particular sample through the MCMC chain and the empirically found distribution are below, along with a comparison of memory usages and runtimes. More results are displayed on the project's page.
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-  <div>
-    <iframe src="https://rg625.github.io/assets/images/kw_sampling/convergence_plot_1_1000.html" width="100%" height="500px"></iframe>  </div>
-  <div>
-    <iframe src="https://rg625.github.io/assets/images/kw_sampling/histogram_comparison_10000_1000.html" width="100%" height="500px"></iframe>
-  </div>
+<div style="display: flex; flex-direction: column; gap: 20px;">
+  <iframe src="https://rg625.github.io/assets/images/kw_sampling/convergence_plot_1_1000.html" width="100%" height="500px"></iframe>
+  <iframe src="https://rg625.github.io/assets/images/kw_sampling/histogram_comparison_10000_1000.html" width="100%" height="500px"></iframe>
 </div>
 
 ## Conclusion
