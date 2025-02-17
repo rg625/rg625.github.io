@@ -38,24 +38,21 @@ A CNN model was trained using various optimizers on the MNIST dataset. The model
 
 ## Results
 
-<!-- ### Training and Test Loss
 
-![Train Loss](../assets/images/mnist_optimizer_comparison/comparative_train_loss.png)
-![Test Loss](../assets/images/mnist_optimizer_comparison/comparative_test_loss.png)
-
-### Training and Test Accuracy
-
-![Train Accuracy](../assets/images/mnist_optimizer_comparison/comparative_train_accuracy.png)
-![Test Accuracy](../assets/images/mnist_optimizer_comparison/comparative_test_accuracy.png)
-
-### Compute Cost and Complexity
-
-![Compute Cost](../assets/images/mnist_optimizer_comparison/comparative_compute_cost.png)
-![Complexity](../assets/images/mnist_optimizer_comparison/comparative_complexity.png)
-
-### Training Time
-
-![Time](../assets/images/mnist_optimizer_comparison/comparative_time.png) -->
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/comparative_train_loss.png" alt="Train Losses" width="100%">
+  </div>
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/comparative_test_accuracy.png" alt="Test Accuracies" width="100%">
+  </div>
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/comparative_compute_cost.png" alt="Computational Costs" width="100%">
+  </div>
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/train_times.png" alt="Training Times" width="100%">
+  </div>
+</div>
 
 ### Predictions and Confusion Matrices
 
@@ -63,38 +60,63 @@ The figures below illustrate the predictions and confusion matrices for each opt
 
 #### SPSAOptimizerSimple
 
-![Predictions](../assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerSimple.png)
-![Confusion Matrix](../assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerSimple.png)
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+  <!-- SPSAOptimizerSimple -->
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerSimple.png" alt="Predictions - SPSAOptimizerSimple" width="100%">
+  </div>
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerSimple.png" alt="Confusion Matrix - SPSAOptimizerSimple" width="100%">
+  </div>
 
-#### SPSAOptimizerAdaptive
+  <!-- SPSAOptimizerAdaptive -->
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerAdaptive.png" alt="Predictions - SPSAOptimizerAdaptive" width="100%">
+  </div>
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerAdaptive.png" alt="Confusion Matrix - SPSAOptimizerAdaptive" width="100%">
+  </div>
 
-![Predictions](../assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerAdaptive.png)
-![Confusion Matrix](../assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerAdaptive.png)
+  <!-- KieferWolfowitzSimple -->
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzSimple.png" alt="Predictions - KieferWolfowitzSimple" width="100%">
+  </div>
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzSimple.png" alt="Confusion Matrix - KieferWolfowitzSimple" width="100%">
+  </div>
 
-#### KieferWolfowitzSimple
+  <!-- KieferWolfowitzAdaptive -->
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzAdaptive.png" alt="Predictions - KieferWolfowitzAdaptive" width="100%">
+  </div>
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzAdaptive.png" alt="Confusion Matrix - KieferWolfowitzAdaptive" width="100%">
+  </div>
 
-![Predictions](../assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzSimple.png)
-![Confusion Matrix](../assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzSimple.png)
+  <!-- Adam -->
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/predictions_Adam.png" alt="Predictions - Adam" width="100%">
+  </div>
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/confusion_matrix_Adam.png" alt="Confusion Matrix - Adam" width="100%">
+  </div>
 
-#### KieferWolfowitzAdaptive
+  <!-- Adagrad -->
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/predictions_Adagrad.png" alt="Predictions - Adagrad" width="100%">
+  </div>
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/confusion_matrix_Adagrad.png" alt="Confusion Matrix - Adagrad" width="100%">
+  </div>
 
-![Predictions](../assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzAdaptive.png)
-![Confusion Matrix](../assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzAdaptive.png)
-
-#### Adam
-
-![Predictions](../assets/images/mnist_optimizer_comparison/predictions_Adam.png)
-![Confusion Matrix](../assets/images/mnist_optimizer_comparison/confusion_matrix_Adam.png)
-
-#### Adagrad
-
-![Predictions](../assets/images/mnist_optimizer_comparison/predictions_Adagrad.png)
-![Confusion Matrix](../assets/images/mnist_optimizer_comparison/confusion_matrix_Adagrad.png)
-
-#### SGD
-
-![Predictions](../assets/images/mnist_optimizer_comparison/predictions_SGD.png)
-![Confusion Matrix](../assets/images/mnist_optimizer_comparison/confusion_matrix_SGD.png)
+  <!-- SGD -->
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/predictions_SGD.png" alt="Predictions - SGD" width="100%">
+  </div>
+  <div>
+    <img src="../assets/images/mnist_optimizer_comparison/confusion_matrix_SGD.png" alt="Confusion Matrix - SGD" width="100%">
+  </div>
+</div>
 
 ## Sampling
 
