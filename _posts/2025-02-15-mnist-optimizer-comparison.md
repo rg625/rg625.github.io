@@ -19,16 +19,16 @@ The shallow neural network utilized for linear regression consists of a single l
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
   <div>
-    <img src="../assets/images/linear_optimizer_comparison/train_loss.png" alt="Train Loss" width="100%">
+    <img src="https://rg625.github.io/assets/images/linear_optimizer_comparison/train_loss.png" alt="Train Loss" width="100%">
   </div>
   <div>
-    <img src="../assets/images/linear_optimizer_comparison/test_loss.png" alt="Test Loss" width="100%">
+    <img src="https://rg625.github.io/assets/images/linear_optimizer_comparison/test_loss.png" alt="Test Loss" width="100%">
   </div>
   <div>
-    <img src="../assets/images/linear_optimizer_comparison/computational_cost.png" alt="Computational Cost" width="100%">
+    <img src="https://rg625.github.io/assets/images/linear_optimizer_comparison/computational_cost.png" alt="Computational Cost" width="100%">
   </div>
   <div>
-    <img src="../assets/images/linear_optimizer_comparison/training_time.png" alt="Training Time" width="100%">
+    <img src="https://rg625.github.io/assets/images/linear_optimizer_comparison/training_time.png" alt="Training Time" width="100%">
   </div>
 </div>
 
@@ -41,16 +41,16 @@ A CNN model was trained using various optimizers on the MNIST dataset. The model
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/comparative_train_loss.png" alt="Train Losses" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/comparative_train_loss.png" alt="Train Losses" width="100%">
   </div>
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/comparative_test_accuracy.png" alt="Test Accuracies" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/comparative_test_accuracy.png" alt="Test Accuracies" width="100%">
   </div>
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/comparative_compute_cost.png" alt="Computational Costs" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/comparative_compute_cost.png" alt="Computational Costs" width="100%">
   </div>
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/train_times.png" alt="Training Times" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/train_times.png" alt="Training Times" width="100%">
   </div>
 </div>
 
@@ -63,58 +63,58 @@ The figures below illustrate the predictions and confusion matrices for each opt
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
   <!-- SPSAOptimizerSimple -->
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerSimple.png" alt="Predictions - SPSAOptimizerSimple" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerSimple.png" alt="Predictions - SPSAOptimizerSimple" width="100%">
   </div>
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerSimple.png" alt="Confusion Matrix - SPSAOptimizerSimple" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerSimple.png" alt="Confusion Matrix - SPSAOptimizerSimple" width="100%">
   </div>
 
   <!-- SPSAOptimizerAdaptive -->
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerAdaptive.png" alt="Predictions - SPSAOptimizerAdaptive" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_SPSAOptimizerAdaptive.png" alt="Predictions - SPSAOptimizerAdaptive" width="100%">
   </div>
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerAdaptive.png" alt="Confusion Matrix - SPSAOptimizerAdaptive" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_SPSAOptimizerAdaptive.png" alt="Confusion Matrix - SPSAOptimizerAdaptive" width="100%">
   </div>
 
   <!-- KieferWolfowitzSimple -->
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzSimple.png" alt="Predictions - KieferWolfowitzSimple" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzSimple.png" alt="Predictions - KieferWolfowitzSimple" width="100%">
   </div>
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzSimple.png" alt="Confusion Matrix - KieferWolfowitzSimple" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzSimple.png" alt="Confusion Matrix - KieferWolfowitzSimple" width="100%">
   </div>
 
   <!-- KieferWolfowitzAdaptive -->
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzAdaptive.png" alt="Predictions - KieferWolfowitzAdaptive" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_KieferWolfowitzAdaptive.png" alt="Predictions - KieferWolfowitzAdaptive" width="100%">
   </div>
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzAdaptive.png" alt="Confusion Matrix - KieferWolfowitzAdaptive" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_KieferWolfowitzAdaptive.png" alt="Confusion Matrix - KieferWolfowitzAdaptive" width="100%">
   </div>
 
   <!-- Adam -->
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/predictions_Adam.png" alt="Predictions - Adam" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_Adam.png" alt="Predictions - Adam" width="100%">
   </div>
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/confusion_matrix_Adam.png" alt="Confusion Matrix - Adam" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_Adam.png" alt="Confusion Matrix - Adam" width="100%">
   </div>
 
   <!-- Adagrad -->
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/predictions_Adagrad.png" alt="Predictions - Adagrad" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_Adagrad.png" alt="Predictions - Adagrad" width="100%">
   </div>
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/confusion_matrix_Adagrad.png" alt="Confusion Matrix - Adagrad" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_Adagrad.png" alt="Confusion Matrix - Adagrad" width="100%">
   </div>
 
   <!-- SGD -->
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/predictions_SGD.png" alt="Predictions - SGD" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/predictions_SGD.png" alt="Predictions - SGD" width="100%">
   </div>
   <div>
-    <img src="../assets/images/mnist_optimizer_comparison/confusion_matrix_SGD.png" alt="Confusion Matrix - SGD" width="100%">
+    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/confusion_matrix_SGD.png" alt="Confusion Matrix - SGD" width="100%">
   </div>
 </div>
 
@@ -124,10 +124,9 @@ The second application of the KW method involves estimating the score function o
 
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
   <div>
-    <img src="../assets/images/kw_sampling/convergence_plot_1_1000.html" alt="Samples Traking" width="100%">
-  </div>
+    <iframe src="https://rg625.github.io/assets/images/kw_sampling/convergence_plot_1_1000.html" width="100%" height="500px"></iframe>  </div>
   <div>
-    <img src="../assets/images/kw_sampling/histogram_comparison_10000_1000.html" alt="Empirically found distributions" width="100%">
+    <iframe src="https://rg625.github.io/assets/images/kw_sampling/histogram_comparison_10000_1000.html" width="100%" height="500px"></iframe>
   </div>
 </div>
 
