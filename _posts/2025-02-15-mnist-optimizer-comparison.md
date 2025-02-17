@@ -17,9 +17,24 @@ The performance of the KW-based optimizer is compared against several state-of-t
 
 The shallow neural network utilized for linear regression consists of a single layer with 20 trainable weights. The dataset was synthetically generated using a randomly sampled set of weights. The performance of each optimization algorithm was evaluated based on training loss, test loss, training accuracy, test accuracy, computational cost, complexity, and training time. The results are presented in the figures below.
 
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+  <div>
+    <img src="../assets/images/linear_optimizer_comparison/train_loss.png" alt="Train Loss" width="100%">
+  </div>
+  <div>
+    <img src="../assets/images/linear_optimizer_comparison/test_loss.png" alt="Test Loss" width="100%">
+  </div>
+  <div>
+    <img src="../assets/images/linear_optimizer_comparison/computational_cost.png" alt="Computational Cost" width="100%">
+  </div>
+  <div>
+    <img src="../assets/images/linear_optimizer_comparison/training_time.png" alt="Training Time" width="100%">
+  </div>
+</div>
+
 ### Classification
 
-A CNN model was trained using various optimizers on the MNIST dataset. The model architecture comprises two convolutional layers with Rectified Linear Unit (ReLU) activation and max pooling, followed by two fully connected layers with ReLU activation, amounting to a total of ???? trainable parameters. The model was trained for 10 epochs with a batch size of 1024 and a learning rate of 0.01. Performance was assessed in terms of training loss, test loss, training accuracy, test accuracy, computational cost, complexity, and training duration.
+A CNN model was trained using various optimizers on the MNIST dataset. The model architecture comprises two convolutional layers with Rectified Linear Unit (ReLU) activation and max pooling, followed by two fully connected layers with ReLU activation, amounting to a total of 55,338 trainable parameters. The model was trained for 10 epochs with a batch size of 1024 and a learning rate of 0.01. Performance was assessed in terms of training loss, test loss, training accuracy, test accuracy, computational cost, complexity, and training duration.
 
 ## Results
 
