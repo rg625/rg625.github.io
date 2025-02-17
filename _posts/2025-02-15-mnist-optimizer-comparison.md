@@ -128,4 +128,4 @@ The results indicate that different optimization algorithms exhibit varying leve
 
 Regarding the second application, the KW method demonstrates comparable performance to autodifferentiation in score estimation; however, it requires additional hyperparameter tuning, particularly in selecting the appropriate perturbation parameter.
 
-The source code for these experiments is available on my [GitHub repository](https://github.com/rg625/mnist-optimizer-comparison). Readers are encouraged to explore the implementation and reproduce the results.
+The source code for these experiments is available on my [GitHub repository](https://github.com/rg625/KW_grad_estimation). Readers are encouraged to explore the implementation and reproduce the results.
