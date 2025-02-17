@@ -64,11 +64,18 @@ The figures below illustrate the predictions and confusion matrices for each opt
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+    align-items: center; /* Ensures alignment */
   }
   .grid-item img {
     width: 100%;
-    height: auto; /* Ensures consistent height */
-    object-fit: contain;
+    height: 100%; /* Forces images to take the full height */
+    object-fit: contain; /* Ensures consistent scaling without distortion */
+  }
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Set a fixed height for equal sizing */
   }
 </style>
 
