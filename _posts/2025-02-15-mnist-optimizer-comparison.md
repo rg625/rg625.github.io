@@ -122,6 +122,15 @@ The figures below illustrate the predictions and confusion matrices for each opt
 
 The second application of the KW method involves estimating the score function of a probability distribution for use in two Markov Chain Monte Carlo (MCMC) sampling algorithms: Langevin Dynamics (LD) and Hamiltonian/Hybrid Monte Carlo (HMC). The performance of KW in this context was compared against PyTorch’s autodifferentiation-based approach and Spall’s SPSA method. For a comprehensive analysis, all these models were tested for different number of steps in the MCMC chains and samples. The main results displaying the evolution of a particular sample through the MCMC chain and the empirically found distribution are below, along with a comparison of memory usages and runtimes. More results are displayed on the project's page.
 
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+  <div>
+    <img src="../assets/images/kw_sampling/convergence_plot_1_1000.html" alt="Samples Traking" width="100%">
+  </div>
+  <div>
+    <img src="../assets/images/kw_sampling/histogram_comparison_10000_1000.html" alt="Empirically found distributions" width="100%">
+  </div>
+</div>
+
 ## Conclusion
 
 The results indicate that different optimization algorithms exhibit varying levels of performance in terms of training loss, test loss, accuracy, computational cost, complexity, and training duration. The Adam optimizer consistently demonstrates strong performance, while other optimizers, such as SPSA and Kiefer-Wolfowitz, yield competitive results depending on the metric under consideration. The KW algorithm, however, is significantly slower than autodifferentiation-based optimizers, as it requires perturbing each parameter individually to estimate the gradient direction. This leads to a linear scaling in computational cost with respect to the number of parameters, making KW impractical for large-scale optimization tasks. While KW exhibits superior convergence properties compared to Adam on average, its computational inefficiency renders it infeasible for practical use. In contrast, SPSA provides a faster alternative at the cost of reduced accuracy.
