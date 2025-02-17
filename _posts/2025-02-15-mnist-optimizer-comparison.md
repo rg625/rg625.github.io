@@ -75,7 +75,7 @@ The figures below illustrate the predictions and confusion matrices for each opt
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px; /* Set a fixed height for equal sizing */
+    width: 300px; /* Set a fixed height for equal sizing */
   }
 </style>
 
