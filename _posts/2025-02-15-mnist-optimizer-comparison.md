@@ -18,8 +18,8 @@ The performance of the KW-based optimizer is compared against several state-of-t
 The shallow neural network utilized for linear regression consists of a single layer with 20 trainable weights. The dataset was synthetically generated using a randomly sampled set of weights. The performance of each optimization algorithm was evaluated based on training loss, test loss, training accuracy, test accuracy, computational cost, complexity, and training time. The results are presented in the figures below.
 
 <div style="display: flex; flex-direction: column; gap: 20px;">
-  <iframe src="https://rg625.github.io/assets/images/kw/linear_regression/metrics_evolution.html" width="100%" height="800px" frameborder="0"></iframe>
-  <iframe src="https://rg625.github.io/assets/images/kw/linear_regression/parameters_evolution.html" width="100%" height="800px" frameborder="0"></iframe>
+  <iframe src="https://rg625.github.io/assets/images/kw/linear_regression/metrics_evolution.html" width="150%" height="800px" frameborder="0"></iframe>
+  <iframe src="https://rg625.github.io/assets/images/kw/linear_regression/parameters_evolution.html" width="150%" height="800px" frameborder="0"></iframe>
 </div>
 
 ### Classification
@@ -48,8 +48,8 @@ A CNN model was trained using various optimizers on the MNIST dataset. The model
 The figures below illustrate the predictions and confusion matrices for each optimizer. Each figure presents a 4x4 grid of randomly selected test samples, along with their true and predicted labels.
 
 <div style="display: flex; flex-direction: column; gap: 20px;">
-  <iframe src="https://rg625.github.io/assets/images/kw/mnist_classifier/predictions.html" width="100%" height="800px" frameborder="0"></iframe>
-  <iframe src="https://rg625.github.io/assets/images/kw/mnist_classifier/confusion_matrix.html" width="100%" height="800px" frameborder="0"></iframe>
+  <iframe src="https://rg625.github.io/assets/images/kw/mnist_classifier/predictions.html" width="150%" height="800px" frameborder="0"></iframe>
+  <iframe src="https://rg625.github.io/assets/images/kw/mnist_classifier/confusion_matrix.html" width="150%" height="800px" frameborder="0"></iframe>
 </div>
 
 ## Sampling
@@ -57,8 +57,8 @@ The figures below illustrate the predictions and confusion matrices for each opt
 The second application of the KW method involves estimating the score function of a probability distribution for use in two Markov Chain Monte Carlo (MCMC) sampling algorithms: Langevin Dynamics (LD) and Hamiltonian/Hybrid Monte Carlo (HMC). The performance of KW in this context was compared against PyTorch’s autodifferentiation-based approach and Spall’s SPSA method. For a comprehensive analysis, all these models were tested for different number of steps in the MCMC chains and samples. The main results displaying the evolution of a particular sample through the MCMC chain and the empirically found distribution are below, along with a comparison of memory usages and runtimes. More results are displayed on the project's page.
 
 <div style="display: flex; flex-direction: column; gap: 20px;">
-  <iframe src="https://rg625.github.io/assets/images/kw/kw_sampling/convergence_plot_1_1000.html" width="100%" height="800px" frameborder="0"></iframe>
-  <iframe src="https://rg625.github.io/assets/images/kw/kw_sampling/histogram_comparison_10000_1000.html" width="100%" height="800px" frameborder="0"></iframe>
+  <iframe src="https://rg625.github.io/assets/images/kw/kw_sampling/convergence_plot_1_1000.html" width="150%" height="800px" frameborder="0"></iframe>
+  <iframe src="https://rg625.github.io/assets/images/kw/kw_sampling/histogram_comparison_10000_1000.html" width="150%" height="800px" frameborder="0"></iframe>
 </div>
 
 ## Conclusion
