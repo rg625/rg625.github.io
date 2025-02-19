@@ -28,19 +28,8 @@ A CNN model was trained using various optimizers on the MNIST dataset. The model
 
 ## Results
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;">
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/comparative_train_loss.png" alt="Train Losses" width="100%">
-  </div>
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/comparative_test_accuracy.png" alt="Test Accuracies" width="100%">
-  </div>
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/comparative_compute_cost.png" alt="Computational Costs" width="100%">
-  </div>
-  <div>
-    <img src="https://rg625.github.io/assets/images/mnist_optimizer_comparison/train_times.png" alt="Training Times" width="100%">
-  </div>
+<div style="display: flex; flex-direction: column; gap: 20px; width: 100%;">
+  <iframe src="https://rg625.github.io/assets/images/kw/mnist_classifier/optimizer_results.html" width="100%" height="600px" frameborder="0"></iframe>
 </div>
 
 ### Predictions and Confusion Matrices
