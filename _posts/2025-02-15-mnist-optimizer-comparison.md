@@ -77,6 +77,7 @@ where $$y_i$$ is the true label and $$\hat{y}_i$$ is the predicted probability. 
 </div>
 
 ### Predictions and Confusion Matrices
+The predictions figure displays the digits to be classified, with the labels above them. $$T$$ stands for target, which is the true label of the digit, while $$P$$ is the predicted label by the model. The confusion matrix is a table used to evaluate the performance of a classification model by comparing predicted labels to true labels. For multi-class classification, the confusion matrix is extended into an $$N \times N$$ table, where $$N$$ is the number of classes. Each row represents actual class instances, while each column represents predicted class instances. The diagonal elements show correct predictions, while off-diagonal elements indicate misclassifications.
 
 <div style="display: flex; flex-direction: column; gap: 20px; width: 100%;">
   <iframe src="https://rg625.github.io/assets/images/kw/mnist_classifier/predictions.html" width="100%" height="600px" frameborder="0"></iframe>
