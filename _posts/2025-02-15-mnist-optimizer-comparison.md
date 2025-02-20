@@ -24,7 +24,7 @@ $$
 where $$e_i$$ is the unit vector along the $$i$$-th coordinate, and $$c > 0$$ is a perturbation parameter. Given $$d$$ parameters, the full gradient estimate requires $$2d$$ function evaluations, rendering it computationally expensive for high-dimensional problems. The update rule for parameter estimation follows:
 
 $$
-\theta_{t+1} = \theta_t - \alpha_t \hat{\nabla} f(\theta_t),
+\theta_{t+1} = \theta_t - \alpha_t \widehat{\nabla f(\theta_t)},
 $$
 
 where $$\alpha_t$$ is a step-size sequence satisfying the Robbins-Monro conditions:
@@ -38,7 +38,7 @@ $$
 Under standard smoothness assumptions on $$f(\theta)$$, the KW method exhibits asymptotic unbiasedness in gradient estimation. Specifically, if $$f$$ is differentiable with Lipschitz gradient, the KW estimate satisfies:
 
 $$
-\mathbb{E}[\hat{\nabla f(\theta)}] = \nabla f(\theta) + \mathcal{O}(c^2).
+\mathbb{E}[\widehat{\nabla f(\theta)}] = \nabla f(\theta) + \mathcal{O}(c^2).
 $$
 
 This error bound suggests that smaller perturbations yield more accurate gradients at the cost of increased variance. Convergence in expectation to a stationary point follows from classical stochastic approximation theory. 
@@ -89,7 +89,7 @@ The predictions figure displays the digits to be classified, with the labels abo
 The KW method was used to approximate the score function $$\nabla \log p(x)$$ for use in Langevin Dynamics and HMC sampling. The score function estimation follows:
 
 $$
-\hat{\nabla \log p(x)} = \frac{p(x + c e_i) - p(x - c e_i)}{2c} e_i.
+\widehat{\nabla \log p(x)} = \frac{p(x + c e_i) - p(x - c e_i)}{2c} e_i.
 $$
 
 Empirical comparisons with PyTorch’s autodifferentiation and SPSA showed that KW performs competitively but requires hyperparameter tuning for optimal perturbation selection.
