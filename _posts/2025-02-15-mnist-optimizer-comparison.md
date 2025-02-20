@@ -5,6 +5,10 @@ date: 2025-02-15 16:15:49
 author: rg625
 ---
 
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 ## Introduction
 
 This article provides a rigorous analysis of the Kiefer-Wolfowitz (KW) algorithm as a stochastic gradient approximation method and its application in optimization and score function estimation. Specifically, we explore the KW method’s convergence properties, computational complexity, and practical utility in optimizing neural networks and estimating score functions for sampling-based inference. We provide a formal derivation of the KW estimator, compare its empirical performance to state-of-the-art optimization algorithms such as Adagrad, Adam, and Stochastic Gradient Descent (SGD), and analyze its efficacy relative to Simultaneous Perturbation Stochastic Approximation (SPSA). Additionally, we investigate its role in Markov Chain Monte Carlo (MCMC) sampling algorithms such as Langevin Dynamics (LD) and Hamiltonian Monte Carlo (HMC). 
