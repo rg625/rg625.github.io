@@ -68,7 +68,7 @@ $$
 \mathcal{L}(\theta) = -\sum_{i=1}^{n} y_i \log \hat{y}_i,
 $$
 
-where $$y_i$$ is the true label and $$\hat{y}_i$$ is the predicted probability. The model was trained for 10 epochs with a batch size of 1024 and a learning rate of 0.01.
+where $$y_i$$ is the true label and $$\hat{y}_i$$ is the predicted probability. The model was trained for $$10$$ epochs with a batch size of $$1024$$ and a learning rate of $$l_R = 0.01$$.
 
 ## Results
 
