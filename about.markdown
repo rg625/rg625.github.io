@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Rares Dimitrie Grozavescu - CV"
+title: "About"
 ---
 
 # Rares Dimitrie Grozavescu - CV
