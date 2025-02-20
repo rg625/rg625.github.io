@@ -1,30 +1,70 @@
 ---
 layout: post
-title: "Kiefer-Wolfowitz Algorithm for Gradient Approximation"
+title: "Kiefer-Wolfowitz Algorithm for Gradient Approximation: Theoretical and Empirical Analysis"
 date: 2025-02-15 16:15:49
 author: rg625
 ---
 
 ## Introduction
 
-This blog post examines the application of the Kiefer-Wolfowitz (KW) algorithm for gradient approximation in both optimization and sampling contexts. The first application involves utilizing the KW method to optimize a shallow neural network for linear regression and a convolutional neural network (CNN) for classification. The second application leverages the KW algorithm to approximate the score of a probability distribution.
+This article provides a rigorous analysis of the Kiefer-Wolfowitz (KW) algorithm as a stochastic gradient approximation method and its application in optimization and score function estimation. Specifically, we explore the KW method’s convergence properties, computational complexity, and practical utility in optimizing neural networks and estimating score functions for sampling-based inference. We provide a formal derivation of the KW estimator, compare its empirical performance to state-of-the-art optimization algorithms such as Adagrad, Adam, and Stochastic Gradient Descent (SGD), and analyze its efficacy relative to Simultaneous Perturbation Stochastic Approximation (SPSA). Additionally, we investigate its role in Markov Chain Monte Carlo (MCMC) sampling algorithms such as Langevin Dynamics (LD) and Hamiltonian Monte Carlo (HMC).
 
-## Optimization
+## The Kiefer-Wolfowitz Gradient Approximation
 
-The performance of the KW-based optimizer is compared against several state-of-the-art optimization algorithms commonly employed in the literature, including Adagrad, Adam, and Stochastic Gradient Descent (SGD). Additionally, it is contrasted with a similar approach that incorporates random perturbation, known as Simultaneous Perturbation Stochastic Approximation (SPSA). Two variants of the KW optimizer were implemented: a basic version adhering strictly to the theoretical framework and an adaptive variant that incorporates the adaptive step-size mechanism from Adam.
+The KW algorithm is a finite-difference method for gradient estimation, expressed as follows for a function \( f: \mathbb{R}^d \to \mathbb{R} \):
 
-### Linear Regression
+\[
+    \nabla f(\theta) \approx \frac{f(\theta + c e_i) - f(\theta - c e_i)}{2c} e_i,
+\]
 
-The shallow neural network utilized for linear regression consists of a single layer with 20 trainable weights. The dataset was synthetically generated using a randomly sampled set of weights. The performance of each optimization algorithm was evaluated based on training loss, test loss, training accuracy, test accuracy, computational cost, complexity, and training time. The results are presented in the figures below.
+where \( e_i \) is the unit vector along the \( i \)-th coordinate, and \( c > 0 \) is a perturbation parameter. Given \( d \) parameters, the full gradient estimate requires \( 2d \) function evaluations, rendering it computationally expensive for high-dimensional problems. The update rule for parameter estimation follows:
+
+\[
+    \theta_{t+1} = \theta_t - \alpha_t \hat{\nabla} f(\theta_t),
+\]
+
+where \( \alpha_t \) is a step-size sequence satisfying the Robbins-Monro conditions:
+
+\[
+    \sum_{t=1}^{\infty} \alpha_t = \infty, \quad \sum_{t=1}^{\infty} \alpha_t^2 < \infty.
+\]
+
+### Convergence Analysis
+
+Under standard smoothness assumptions on \( f(\theta) \), the KW method exhibits asymptotic unbiasedness in gradient estimation. Specifically, if \( f \) is differentiable with Lipschitz gradient, the KW estimate satisfies:
+
+\[
+    \mathbb{E}[\hat{\nabla} f(\theta)] = \nabla f(\theta) + \mathcal{O}(c^2).
+\]
+
+This error bound suggests that smaller perturbations yield more accurate gradients at the cost of increased variance. Convergence in expectation to a stationary point follows from classical stochastic approximation theory.
+
+## Application to Optimization
+
+### Linear Regression with a Shallow Neural Network
+
+A single-layer neural network with \( d = 20 \) trainable parameters was optimized using KW, Adam, Adagrad, SGD, and SPSA. The synthetic dataset was generated from a true weight vector \( w^* \in \mathbb{R}^{20} \), and training was performed using mean squared error (MSE) loss:
+
+\[
+    \mathcal{L}(w) = \frac{1}{n} \sum_{i=1}^{n} (y_i - x_i^T w)^2.
+\]
+
+Performance metrics included training loss, test loss, computational complexity, and convergence speed. Results are presented in the following figures:
 
 <div style="display: flex; flex-direction: column; gap: 20px; width: 100%;">
   <iframe src="https://rg625.github.io/assets/images/kw/linear_regression/metrics_evolution.html" width="100%" height="600px" frameborder="0"></iframe>
   <iframe src="https://rg625.github.io/assets/images/kw/linear_regression/parameters_evolution.html" width="100%" height="600px" frameborder="0"></iframe>
 </div>
 
-### Classification
+### Classification Using a Convolutional Neural Network
 
-A CNN model was trained using various optimizers on the MNIST dataset. The model architecture comprises two convolutional layers with Rectified Linear Unit (ReLU) activation and max pooling, followed by two fully connected layers with ReLU activation, amounting to a total of 55,338 trainable parameters. The model was trained for 10 epochs with a batch size of 1024 and a learning rate of 0.01. Performance was assessed in terms of training loss, test loss, training accuracy, test accuracy, computational cost, complexity, and training duration.
+A CNN with 55,338 trainable parameters was trained on the MNIST dataset using various optimizers. The architecture consisted of two convolutional layers (ReLU activation, max pooling) followed by two fully connected layers:
+
+\[
+    \mathcal{L}(\theta) = -\sum_{i=1}^{n} y_i \log \hat{y}_i,
+\]
+
+where \( y_i \) is the true label and \( \hat{y}_i \) is the predicted probability. The model was trained for 10 epochs with a batch size of 1024 and a learning rate of 0.01.
 
 ## Results
 
@@ -34,16 +74,20 @@ A CNN model was trained using various optimizers on the MNIST dataset. The model
 
 ### Predictions and Confusion Matrices
 
-The figures below illustrate the predictions and confusion matrices for each optimizer. Each figure presents a 4x4 grid of randomly selected test samples, along with their true and predicted labels.
-
 <div style="display: flex; flex-direction: column; gap: 20px; width: 100%;">
   <iframe src="https://rg625.github.io/assets/images/kw/mnist_classifier/predictions.html" width="100%" height="600px" frameborder="0"></iframe>
   <iframe src="https://rg625.github.io/assets/images/kw/mnist_classifier/confusion_matrix.html" width="100%" height="600px" frameborder="0"></iframe>
 </div>
 
-## Sampling
+## Application to Sampling: Score Function Estimation
 
-The second application of the KW method involves estimating the score function of a probability distribution for use in two Markov Chain Monte Carlo (MCMC) sampling algorithms: Langevin Dynamics (LD) and Hamiltonian/Hybrid Monte Carlo (HMC). The performance of KW in this context was compared against PyTorch’s autodifferentiation-based approach and Spall’s SPSA method. For a comprehensive analysis, all these models were tested for different numbers of steps in the MCMC chains and samples. The main results displaying the evolution of a particular sample through the MCMC chain and the empirically found distribution are below, along with a comparison of memory usages and runtimes. More results are displayed on the project's page.
+The KW method was used to approximate the score function \( \nabla \log p(x) \) for use in Langevin Dynamics and HMC sampling. The score function estimation follows:
+
+\[
+    \hat{\nabla} \log p(x) = \frac{p(x + c e_i) - p(x - c e_i)}{2c} e_i.
+\]
+
+Empirical comparisons with PyTorch’s autodifferentiation and SPSA showed that KW performs competitively but requires hyperparameter tuning for optimal perturbation selection.
 
 <div style="display: flex; flex-direction: column; gap: 20px; width: 100%;">
   <iframe src="https://rg625.github.io/assets/images/kw/kw_sampling/convergence_plot_1_1000.html" width="100%" height="600px" frameborder="0"></iframe>
@@ -52,9 +96,6 @@ The second application of the KW method involves estimating the score function o
 
 ## Conclusion
 
-The results indicate that different optimization algorithms exhibit varying levels of performance in terms of training loss, test loss, accuracy, computational cost, complexity, and training duration. The Adam optimizer consistently demonstrates strong performance, while other optimizers, such as SPSA and Kiefer-Wolfowitz, yield competitive results depending on the metric under consideration. The KW algorithm, however, is significantly slower than autodifferentiation-based optimizers, as it requires perturbing each parameter individually to estimate the gradient direction. This leads to a linear scaling in computational cost with respect to the number of parameters, making KW impractical for large-scale optimization tasks. While KW exhibits superior convergence properties compared to Adam on average, its computational inefficiency renders it infeasible for practical use. In contrast, SPSA provides a faster alternative at the cost of reduced accuracy.
+While KW demonstrates strong theoretical convergence guarantees, its computational inefficiency due to the linear scaling of function evaluations with dimensionality makes it impractical for large-scale optimization. KW’s gradient estimates are asymptotically unbiased but suffer from high variance, requiring careful selection of the perturbation parameter. Comparisons with Adam, Adagrad, and SPSA indicate that while KW achieves competitive loss minimization, its computational burden outweighs its benefits. For score function estimation, KW provides a viable alternative to autodifferentiation but necessitates extensive hyperparameter tuning.
 
-Regarding the second application, the KW method demonstrates comparable performance to autodifferentiation in score estimation; however, it requires additional hyperparameter tuning, particularly in selecting the appropriate perturbation parameter.
-
-The source code for these experiments is available on my [GitHub repository](https://github.com/rg625/KW_grad_estimation). Readers are encouraged to explore the implementation and reproduce the results.
-
+The source code is available on my [GitHub repository](https://github.com/rg625/KW_grad_estimation), allowing for reproducibility and further exploration of these findings.
