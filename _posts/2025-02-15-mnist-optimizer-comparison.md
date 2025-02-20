@@ -3,6 +3,9 @@ layout: post
 title: "Kiefer-Wolfowitz Algorithm for Gradient Approximation: Theoretical and Empirical Analysis"
 date: 2025-02-15 16:15:49
 author: rg625
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 ---
 
 ## Introduction
