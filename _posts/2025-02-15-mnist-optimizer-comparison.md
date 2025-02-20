@@ -38,7 +38,7 @@ $$
 Under standard smoothness assumptions on $$f(\theta)$$, the KW method exhibits asymptotic unbiasedness in gradient estimation. Specifically, if $$f$$ is differentiable with Lipschitz gradient, the KW estimate satisfies:
 
 $$
-\mathbb{E}[\hat{\nabla} f(\theta)] = \nabla f(\theta) + \mathcal{O}(c^2).
+\mathbb{E}[\hat{\nabla f(\theta)}] = \nabla f(\theta) + \mathcal{O}(c^2).
 $$
 
 This error bound suggests that smaller perturbations yield more accurate gradients at the cost of increased variance. Convergence in expectation to a stationary point follows from classical stochastic approximation theory. 
