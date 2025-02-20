@@ -47,7 +47,7 @@ This error bound suggests that smaller perturbations yield more accurate gradien
 
 ### Linear Regression with a Shallow Neural Network
 
-A single-layer neural network with $$d = 20$$ trainable parameters was optimized using KW, Adam, Adagrad, SGD, and SPSA. The synthetic dataset was generated from a true weight vector $$w^* \in \mathbb{R}^{20}$$, and training was performed using mean squared error (MSE) loss:
+A single-layer neural network with $$d = 20$$ trainable parameters was optimized using KW, Adam, Adagrad, SGD, and SPSA. The synthetic dataset was generated from a true weight vector $$w^* \in \mathbb{R}^{d}$$, and training was performed using mean squared error (MSE) loss:
 
 $$
 \mathcal{L}(w) = \frac{1}{n} \sum_{i=1}^{n} (y_i - x_i^T w)^2.
@@ -88,7 +88,7 @@ where $$y_i$$ is the true label and $$\hat{y}_i$$ is the predicted probability. 
 The KW method was used to approximate the score function $$\nabla \log p(x)$$ for use in Langevin Dynamics and HMC sampling. The score function estimation follows:
 
 $$
-\hat{\nabla} \log p(x) = \frac{p(x + c e_i) - p(x - c e_i)}{2c} e_i.
+\hat{\nabla \log p(x)} = \frac{p(x + c e_i) - p(x - c e_i)}{2c} e_i.
 $$
 
 Empirical comparisons with PyTorch’s autodifferentiation and SPSA showed that KW performs competitively but requires hyperparameter tuning for optimal perturbation selection.
