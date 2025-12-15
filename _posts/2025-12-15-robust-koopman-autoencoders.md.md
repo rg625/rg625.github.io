@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Robust Koopman Autoencoders for Fluid Dynamics: Breaking the Linear Barrier"
-date: 2025-12-15 12:15:49
+date: 2025-12-15 16:15:49
 author: rg625
 mathjax: true
 ---
