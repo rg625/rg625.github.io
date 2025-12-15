@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Robust Koopman Autoencoders for Fluid Dynamics: Breaking the Linear Barrier"
-date: 2025-12-15 16:15:49
+date: 2025-12-10 16:15:49
 author: rg625
 mathjax: true
 ---
@@ -30,16 +30,16 @@ to stabilize long-term predictions of fluid flows across varying Reynolds number
 
 Consider a discrete-time dynamical system:
 
-\[
+$$
 x_{t+1} = F(x_t),
-\]
+$$
 
-where \( x \in \mathcal{X} \) represents the fluid state. The **Koopman operator** \( \mathcal{K} \) acts on observable functions  
-\( g: \mathcal{X} \rightarrow \mathbb{C} \) as:
+where \( x \in \mathcal{X} \) represents the fluid state. The **Koopman operator** \( \mathcal{K} \) acts on observable functions
+\( g: \mathcal{X} \rightarrow \mathbb{C} \) as
 
-\[
+$$
 \mathcal{K} g(x_t) = g(F(x_t)) = g(x_{t+1}).
-\]
+$$
 
 Although the underlying dynamics \( F \) are non-linear, the Koopman operator is **linear**, albeit infinite-dimensional. The challenge is therefore to learn a *finite-dimensional approximation*.
 
